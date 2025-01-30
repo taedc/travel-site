@@ -41,11 +41,28 @@
 
     &__description {
         color: white;
-        font-size: 1.875rem;
+        font-size: 0.625rem;
         font-weight: 300;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         max-width: 30rem;
         margin-left:auto;
         margin-right:auto;
+
+        @mixin atSmall {
+            font-size: 1rem;
+        }
+
+        @mixin atMedium {
+            font-size: 1.5rem;
+        }
+
+        @mixin atLarge {
+            font-size: 1.875rem;
+        }
+        /* Using clamp instead of mixins
+        font-size: 0.625rem;
+        font-size: clamp(0.625rem, 0rem + 3.125vw, 1.875rem);
+        */
+
     }
 }
